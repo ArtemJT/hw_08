@@ -29,7 +29,7 @@ public class ArrayValueCalculator {
     }
     int result = 0;
       for (int y = 0; y < array.length; y++) {
-        for (int x = 0; x < array[0].length; x++) {
+        for (int x = 0; x < array[y].length; x++) {
           String s = array[y][x];
           if (s != null) {
             try {
