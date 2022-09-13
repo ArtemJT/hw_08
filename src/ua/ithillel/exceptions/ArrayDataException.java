@@ -1,8 +1,17 @@
 package ua.ithillel.exceptions;
 
-public class ArraySizeException extends RuntimeException {
+public class ArrayDataException extends NumberFormatException {
 
-  public ArraySizeException(String message) {
-    super(message);
+  private final int firstIndex;
+  private final int secondIndex;
+
+  public ArrayDataException(int firstIndex, int secondIndex) {
+    this.firstIndex = firstIndex;
+    this.secondIndex = secondIndex;
+  }
+
+  @Override
+  public String getMessage() {
+    return String.format("Exception in [%d][%d]", firstIndex, secondIndex);
   }
 }
