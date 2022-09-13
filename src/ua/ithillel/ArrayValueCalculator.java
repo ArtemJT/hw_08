@@ -13,13 +13,10 @@ public class ArrayValueCalculator {
     array[2][2] = "string";
     array[3][2] = "1";
 
-    int result = 0;
     try {
-      result = doCalc(array);
+      System.out.println("Result: " + doCalc(array));
     } catch (ArraySizeException | ArrayDataException e) {
       System.out.println(e.getMessage());
-    } finally {
-      System.out.println("Result: " + result);
     }
   }
 
